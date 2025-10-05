@@ -4,7 +4,7 @@ from PIL import Image
 import base64
 import io
 
-img=Image.open("brand.jpg")
+img=Image.open("brand.avif")
 if img.format.lower()=="avif":
     img=img.convert("RGB")
     ext="JPEG"
@@ -74,4 +74,5 @@ else:
                 except Exception:
                     pass
         except Exception:
+
             st.error("Request failed.")
